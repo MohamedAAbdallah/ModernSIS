@@ -1,0 +1,80 @@
+/* Establish Dark Mode Color Variables */
+:root {
+  --background-color: #121212; /* Very dark gray for body background */
+  --card-background-color: #1e1e1e; /* Slightly lighter dark gray for cards */
+  --text-color: #e0e0e0; /* Light gray for general text */
+  --heading-color: #ffffff; /* White for headings */
+  --link-color: #bb86fc; /* Purple for links */
+  --border-color: #333333; /* Darker gray for borders */
+}
+
+/* Apply Dark Mode Styles */
+body {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  font-family: Arial, sans-serif !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Card Styles */
+.grid-item {
+  background-color: var(--card-background-color) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  color: var(--heading-color) !important;
+  margin: 0 0 15px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Paragraph Text */
+p {
+  color: var(--text-color) !important;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Links */
+a {
+  color: var(--link-color) !important;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Inputs and Buttons */
+input,
+textarea,
+select,
+button {
+  background-color: var(--card-background-color) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 5px 0;
+}
