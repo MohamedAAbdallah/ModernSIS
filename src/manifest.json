@@ -14,8 +14,7 @@
       "matches": ["*://*.aou.edu.kw/*"],
       "js": ["content.js"],
       "run_at": "document_start",
-      "all_frames": true,
-      "world": "ISOLATED"
+      "all_frames": true
     }
   ],
   "action": {
