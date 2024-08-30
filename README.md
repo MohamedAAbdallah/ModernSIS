@@ -1,6 +1,6 @@
 # **SIS Darkmode**
 
-![SIS Darkmode Logo](128.png)
+![SIS Darkmode Logo](src/icons/128.png)
 
 **Version**: 0.1.0.1  
 **License**: [GNU General Public License v3.0](LICENSE)  
@@ -30,7 +30,7 @@ SIS Darkmode is designed to provide a visually appealing dark theme for the AOU 
 - 🌑 **Dark Mode Theme**: A consistent, eye-friendly dark theme across SIS pages.
 - 🖥️ **Supports Multiple Pages**: Compatible with all AOU SIS pages.
 - 🚀 **Lightweight and Fast**: Minimal impact on browser performance.
-- 🔧 **Easy Installation and Use**: Quick setup with one-click installation from the Chrome Web Store (or manual installation).
+- 🔧 **Easy Installation and Use**: Quick setup with one-click installation from the Chrome or Edge Web Store.
 - 🔏 **Privacy**: Only CSS code will be altered without reading or writing to your data.
 
 ## **Usage**
