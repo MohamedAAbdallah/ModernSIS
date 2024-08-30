@@ -8,52 +8,44 @@
   --border-color: #333333; /* Darker gray for borders */
 }
 
-/* Apply Dark Mode Styles */
 body {
   background-color: var(--background-color) !important;
   color: var(--text-color) !important;
-  font-family: Arial, sans-serif !important;
-  margin: 0;
-  padding: 0;
 }
 
-/* Card Styles */
+#HeaderReg_imgBanner {
+  padding: 150px 200px 0px 0px !important;
+  background: url("https://www.aou.edu.eg/assets/aou/images/slider/v2-03.jpg") !important;
+  background-size: cover !important;
+  content-visibility: hidden !important;
+  height: 160px !important;
+  width: -webkit-fill-available !important;
+}
+
+form h1 {
+  padding: 10px 0 10px 0px;
+  margin: 20px 0 0;
+  text-align: center;
+}
+
 .grid-item {
   background-color: var(--card-background-color) !important;
   color: var(--text-color) !important;
   border: 1px solid var(--border-color) !important;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  margin: 10px;
+  /* box-shadow: 0 2px 5px rgba(37, 106, 5, 0.2); */
 }
 
-/* Headings */
 h1,
 h2,
 h3 {
   color: var(--heading-color) !important;
-  margin: 0 0 15px;
   font-weight: bold;
 }
 
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.75rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-/* Paragraph Text */
 p {
   color: var(--text-color) !important;
-  line-height: 1.6;
-  margin-bottom: 15px;
 }
 
 /* Links */
@@ -66,7 +58,10 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Inputs and Buttons */
+font {
+  color: var(--text-color) !important;
+}
+
 input,
 textarea,
 select,
@@ -77,4 +72,37 @@ button {
   border-radius: 4px;
   padding: 5px 10px;
   margin: 5px 0;
+}
+
+legend {
+  color: var(--text-color) !important;
+}
+
+fieldset {
+  color: var(--text-color) !important;
+  border-color: var(--text-color) !important;
+  /* background-color: var(--card-background-color) !important; */
+}
+
+.NormGrid th {
+  background-color: #002d58 !important;
+  color: var(--text-color) !important;
+  font-weight: bold !important;
+}
+
+.NormGrid td {
+  background-color: var(--card-background-color) !important;
+  
+}
+
+td {
+  color: var(--text-color) !important;
+}
+table span,
+table text {
+  color: var(--text-color) !important;
+}
+
+.sky_blue-bgcolor {
+  background-color: var(--card-background-color) !important;
 }
