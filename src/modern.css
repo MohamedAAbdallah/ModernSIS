@@ -14,12 +14,13 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+/* Target elements within the body with the ID ModernSIS_dark */
+body#ModernSIS_dark {
   background-color: var(--background-color) !important;
   color: var(--text-color) !important;
 }
 
-#HeaderReg_imgBanner {
+body#ModernSIS_dark #HeaderReg_imgBanner {
   padding: 150px 200px 0px 0px !important;
   background: url("https://www.aou.edu.eg/assets/aou/images/slider/v2-03.jpg") !important;
   background-size: cover !important;
@@ -28,80 +29,89 @@ body {
   width: -webkit-fill-available !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+body#ModernSIS_dark h1,
+body#ModernSIS_dark h2,
+body#ModernSIS_dark h3,
+body#ModernSIS_dark h4,
+body#ModernSIS_dark h5,
+body#ModernSIS_dark h6 {
   color: var(--primary-color);
   text-shadow: 2px 2px 5px var(--box-shadow-color);
   animation: fadeInDown 1s ease-in-out;
   font-weight: bold;
 }
 
-#Form1 h1 {
+body#ModernSIS_dark #Form1 h1 {
   padding: 10px 0 10px 0px;
   margin: 20px 0 0;
   text-align: center;
 }
 
-.grid-item {
+body#ModernSIS_dark .grid-item {
   background-color: #34495e !important;
   color: var(--text-color) !important;
-  border: 1px solid var(--border-color) !important;
+  border: 1px solid var(--secondary-color) !important;
   border-radius: var(--border-radius) !important;
   box-shadow: 0 8px 20px var(--box-shadow-color) !important;
   padding: 10px 20px 10px !important;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.grid-item:hover {
+body#ModernSIS_dark .grid-item:hover {
   box-shadow: 0 12px 30px var(--box-shadow-color);
   transform: translateY(-5px);
 }
 
-.grid-item h4 {
+body#ModernSIS_dark .grid-item h4 {
   margin-top: 10px;
 }
 
-p {
+body#ModernSIS_dark p {
   color: var(--text-color) !important;
 }
 
-a {
+body#ModernSIS_dark a {
   color: var(--primary-color);
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
   border-radius: var(--border-radius);
 }
 
-a:hover {
+body#ModernSIS_dark a:hover {
   color: var(--hover-color);
   text-decoration: underline;
   transform: scale(1.1);
 }
 
-font {
+body#ModernSIS_dark font {
   color: var(--text-color) !important;
 }
 
-button, input[type="button"], input[type="submit"] {
+body#ModernSIS_dark button,
+body#ModernSIS_dark input[type="button"],
+body#ModernSIS_dark input[type="submit"] {
   background: var(--gradient-color);
   color: var(--primary-color);
-  /* padding: 10px 20px; */
   border: none;
   cursor: pointer;
   border-radius: var(--border-radius);
   box-shadow: 0 4px 10px var(--box-shadow-color);
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+body#ModernSIS_dark button:hover,
+body#ModernSIS_dark input[type="button"]:hover,
+body#ModernSIS_dark input[type="submit"]:hover {
   background-color: var(--hover-color);
   transform: translateY(-2px);
   box-shadow: 0 6px 15px var(--box-shadow-color);
 }
 
-input[type="text"], input[type="email"], input[type="password"], textarea {
-  /* width: 100%;
-  padding: 10px;
-  margin-bottom: 20px; */
+body#ModernSIS_dark input[type="text"],
+body#ModernSIS_dark input[type="email"],
+body#ModernSIS_dark input[type="password"],
+body#ModernSIS_dark textarea {
   border: 1px solid var(--secondary-color);
   border-radius: var(--border-radius);
   background-color: var(--background-color);
@@ -110,21 +120,22 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+body#ModernSIS_dark input[type="text"]:focus,
+body#ModernSIS_dark input[type="email"]:focus,
+body#ModernSIS_dark input[type="password"]:focus,
+body#ModernSIS_dark textarea:focus {
   border-color: var(--primary-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   outline: none;
 }
 
-select {
+body#ModernSIS_dark select {
   appearance: none;
   background-color: var(--background-color);
   color: var(--text-color);
   padding: 10px;
   border: 1px solid var(--secondary-color);
   border-radius: 5px;
-  /* font-size: 16px; */
-  /* width: 100%; */
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -134,40 +145,40 @@ select {
   background-size: 12px;
 }
 
-select:focus {
+body#ModernSIS_dark select:focus {
   border-color: var(--primary-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   outline: none;
 }
 
-legend {
+body#ModernSIS_dark legend {
   color: var(--text-color) !important;
 }
 
-fieldset {
+body#ModernSIS_dark fieldset {
   color: var(--text-color) !important;
   border-color: var(--text-color) !important;
-  /* background-color: var(--card-background-color) !important; */
 }
 
-.NormGrid th {
+body#ModernSIS_dark .NormGrid th {
   background-color: #002d58 !important;
   color: var(--primary-color) !important;
   font-weight: bold !important;
 }
 
-.NormGrid td {
+body#ModernSIS_dark .NormGrid td {
   background-color: var(--background-color) !important;
 }
 
-td {
-  color: var(--primary-color) !important;
-}
-table span,
-table text {
+body#ModernSIS_dark td {
   color: var(--primary-color) !important;
 }
 
-.sky_blue-bgcolor {
+body#ModernSIS_dark table span,
+body#ModernSIS_dark table text {
+  color: var(--primary-color) !important;
+}
+
+body#ModernSIS_dark .sky_blue-bgcolor {
   background-color: var(--background-color) !important;
 }

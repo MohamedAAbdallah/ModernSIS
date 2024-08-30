@@ -2,7 +2,7 @@
 
 ![SIS Darkmode Logo](src/icons/128.png)
 
-**Version**: 0.1.0.2  
+**Version**: 0.1.0.4
 **License**: [GNU General Public License v3.0](LICENSE)  
 
 A Chrome extension that applies a modern dark mode theme to the AOU Student Information System (SIS) pages for a more comfortable, eye-friendly browsing experience during extended usage.
