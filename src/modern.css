@@ -1,11 +1,17 @@
 /* Establish Dark Mode Color Variables */
 :root {
-  --background-color: #121212; /* Very dark gray for body background */
-  --card-background-color: #1e1e1e; /* Slightly lighter dark gray for cards */
-  --text-color: #e0e0e0; /* Light gray for general text */
-  --heading-color: #ffffff; /* White for headings */
-  --link-color: #bb86fc; /* Purple for links */
-  --border-color: #333333; /* Darker gray for borders */
+  --primary-color: #e8f6f2;
+  --secondary-color: #c7ccd0;
+  --text-color: #ecf0f1;
+  --background-color: #2c3e50;
+  --hover-color: #9a9d9d;
+  --gradient-color: linear-gradient(135deg, #f6f9f9, #e8f6f2);
+  --box-shadow-color: rgba(0, 0, 0, 0.4);
+  --border-radius: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,56 +28,116 @@ body {
   width: -webkit-fill-available !important;
 }
 
-form h1 {
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  text-shadow: 2px 2px 5px var(--box-shadow-color);
+  animation: fadeInDown 1s ease-in-out;
+  font-weight: bold;
+}
+
+#Form1 h1 {
   padding: 10px 0 10px 0px;
   margin: 20px 0 0;
   text-align: center;
 }
 
 .grid-item {
-  background-color: var(--card-background-color) !important;
+  background-color: #34495e !important;
   color: var(--text-color) !important;
   border: 1px solid var(--border-color) !important;
-  border-radius: 10px;
-  padding: 15px;
-  /* box-shadow: 0 2px 5px rgba(37, 106, 5, 0.2); */
+  border-radius: var(--border-radius) !important;
+  box-shadow: 0 8px 20px var(--box-shadow-color) !important;
+  padding: 10px 20px 10px !important;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-h1,
-h2,
-h3 {
-  color: var(--heading-color) !important;
-  font-weight: bold;
+.grid-item:hover {
+  box-shadow: 0 12px 30px var(--box-shadow-color);
+  transform: translateY(-5px);
+}
+
+.grid-item h4 {
+  margin-top: 10px;
 }
 
 p {
   color: var(--text-color) !important;
 }
 
-/* Links */
 a {
-  color: var(--link-color) !important;
+  color: var(--primary-color);
   text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  border-radius: var(--border-radius);
 }
 
 a:hover {
+  color: var(--hover-color);
   text-decoration: underline;
+  transform: scale(1.1);
 }
 
 font {
   color: var(--text-color) !important;
 }
 
-input,
-textarea,
-select,
-button {
-  background-color: var(--card-background-color) !important;
-  color: var(--text-color) !important;
-  border: 1px solid var(--border-color) !important;
-  border-radius: 4px;
-  padding: 5px 10px;
-  margin: 5px 0;
+button, input[type="button"], input[type="submit"] {
+  background: var(--gradient-color);
+  color: var(--primary-color);
+  /* padding: 10px 20px; */
+  border: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px var(--box-shadow-color);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px var(--box-shadow-color);
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  /* width: 100%;
+  padding: 10px;
+  margin-bottom: 20px; */
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+select {
+  appearance: none;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  /* font-size: 16px; */
+  /* width: 100%; */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23ecf0f1" d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  outline: none;
 }
 
 legend {
@@ -86,23 +152,22 @@ fieldset {
 
 .NormGrid th {
   background-color: #002d58 !important;
-  color: var(--text-color) !important;
+  color: var(--primary-color) !important;
   font-weight: bold !important;
 }
 
 .NormGrid td {
-  background-color: var(--card-background-color) !important;
-  
+  background-color: var(--background-color) !important;
 }
 
 td {
-  color: var(--text-color) !important;
+  color: var(--primary-color) !important;
 }
 table span,
 table text {
-  color: var(--text-color) !important;
+  color: var(--primary-color) !important;
 }
 
 .sky_blue-bgcolor {
-  background-color: var(--card-background-color) !important;
+  background-color: var(--background-color) !important;
 }
