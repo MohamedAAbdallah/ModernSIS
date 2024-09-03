@@ -7,13 +7,13 @@
   "content_scripts": [
     {
       "matches": ["*://*.aou.edu.kw/*"],
-      "exclude_globs": ["*Report*", "*Exam*"],
+      "exclude_globs": ["*Report*", "*Exam*", "FinancialEGY"],
       "css": ["modern.css"],
       "all_frames": true
     },
     {
       "matches": ["*://*.aou.edu.kw/*"],
-      "exclude_globs": ["*Report*", "*Exam*"],
+      "exclude_globs": ["*Report*", "*Exam*", "FinancialEGY"],
       "js": ["content.js"],
       "run_at": "document_start",
       "all_frames": true
@@ -43,7 +43,7 @@
     {
       "resources": ["modern.css"],
       "matches": ["https://*.aou.edu.kw/*"],
-      "exclude_globs": ["*Report*", "*Exam*"]
+      "exclude_globs": ["*Report*", "*Exam*", "FinancialEGY"]
     }
   ]
 }
