@@ -58,6 +58,7 @@ To report any violations, please create a GitHub issue or contact us via email a
 
 We would like to thank the following contributors for their efforts in developing this project:
 
+- **Yossif ElHoseny** - Web Designer
 - **Mohamed Hamed** - Web Developer
 - **Bassant Ahmed** - Graphic Designer
 
