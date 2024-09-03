@@ -61,6 +61,8 @@ We would like to thank the following contributors for their efforts in developin
 - **Yossif ElHoseny** - Web Designer
 - **Mohamed Hamed** - Web Developer
 - **Bassant Ahmed** - Graphic Designer
+- **Ahmed Yasser** - Tester
+- **Rana Abdelsalam** - Tester
 
 ## **License**
 
