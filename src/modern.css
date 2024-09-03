@@ -1,5 +1,5 @@
 body.ModernSIS[id="White"] {
-  --primary-color: #603F26;
+  --primary-color: #603f26;
   --secondary-color: #f0f4f8;
   --text-color: #333333;
   --background-color: #ffffff;
@@ -35,10 +35,10 @@ body.ModernSIS[id="Pink"] {
 }
 
 body.ModernSIS[id="Grey"] {
-  --primary-color: #5B99C2;
+  --primary-color: #5b99c2;
   --secondary-color: #95a5a6;
-  --text-color: #DDE6ED;
-  --background-color: #27374D;
+  --text-color: #dde6ed;
+  --background-color: #27374d;
   --hover-color: #176b87;
   --box-shadow-color: rgba(0, 0, 0, 0.5);
   --gradient-color: linear-gradient(135deg, #2c3e50, #34495e);
@@ -53,9 +53,9 @@ body.ModernSIS[id="Grey"] {
 }
 
 body.ModernSIS[id="Black"] {
-  --primary-color: #5B99C2;
+  --primary-color: #5b99c2;
   --secondary-color: #333333;
-  --text-color: #DDE6ED;
+  --text-color: #dde6ed;
   --background-color: #1e1e1e;
   --hover-color: #666666;
   --box-shadow-color: rgba(0, 0, 0, 0.5);
