@@ -1,20 +1,28 @@
-// Load the saved mode and update the checkbox
-chrome.storage.sync.get("darkMode", (data) => {
-  const isDarkMode = data.darkMode || false; // Default to false if not set
-  document.getElementById("dark-mode-toggle").checked = isDarkMode;
+chrome.storage.local.get("theme", (data) => {
+  const theme = data.theme || "None";
+  document.querySelector(
+    `input[name="theme"][value="${theme}"]`
+  ).checked = true;
 });
 
-// Listen for changes on the checkbox and send a message to the content script
-document
-  .getElementById("dark-mode-toggle")
-  .addEventListener("change", function () {
-    const isDarkMode = this.checked;
+document.querySelectorAll('input[name="theme"]').forEach((radio) => {
+  radio.addEventListener("change", function () {
+    const selectedTheme = this.value;
 
-    // Send a message to the content script to toggle dark mode
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      chrome.tabs.sendMessage(tabs[0].id, {
-        action: "toggleDarkMode",
-        mode: isDarkMode,
-      });
+      if (tabs.length > 0) {
+        chrome.tabs.sendMessage(
+          tabs[0].id,
+          { action: "changeTheme", theme: selectedTheme },
+          (response) => {
+            if (chrome.runtime.lastError) {
+              console.log("Error sending message:", chrome.runtime.lastError);
+            } else {
+              console.log("Theme changed to:", selectedTheme);
+            }
+          }
+        );
+      }
     });
   });
+});

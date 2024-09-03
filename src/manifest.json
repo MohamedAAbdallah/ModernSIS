@@ -1,17 +1,19 @@
 {
   "manifest_version": 3,
   "name": "Modern SIS",
-  "version": "0.1.0.4",
+  "version": "0.1.1.0",
   "description": "A Chrome extension that applies a modern dark mode theme to the AOU Student Information System (SIS).",
   "permissions": ["storage", "activeTab", "scripting"],
   "content_scripts": [
     {
       "matches": ["*://*.aou.edu.kw/*"],
+      "exclude_globs": ["*Report*", "*Exam*"],
       "css": ["modern.css"],
       "all_frames": true
     },
     {
       "matches": ["*://*.aou.edu.kw/*"],
+      "exclude_globs": ["*Report*", "*Exam*"],
       "js": ["content.js"],
       "run_at": "document_start",
       "all_frames": true
@@ -40,7 +42,8 @@
   "web_accessible_resources": [
     {
       "resources": ["modern.css"],
-      "matches": ["*://*.aou.edu.kw/*"]
+      "matches": ["https://*.aou.edu.kw/*"],
+      "exclude_globs": ["*Report*", "*Exam*"]
     }
   ]
 }

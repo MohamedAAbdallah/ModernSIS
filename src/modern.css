@@ -1,27 +1,82 @@
-/* Establish Dark Mode Color Variables */
-:root {
-  --primary-color: #e8f6f2;
-  --secondary-color: #c7ccd0;
-  --text-color: #ecf0f1;
-  --background-color: #2c3e50;
-  --hover-color: #9a9d9d;
-  --gradient-color: linear-gradient(135deg, #f6f9f9, #e8f6f2);
-  --box-shadow-color: rgba(0, 0, 0, 0.4);
-  --border-radius: 10px;
+body.ModernSIS[id="White"] {
+  --primary-color: #603F26;
+  --secondary-color: #f0f4f8;
+  --text-color: #333333;
+  --background-color: #ffffff;
+  --hover-color: #011124;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --gradient-color: linear-gradient(135deg, #e0f7fa, #b9fbc0);
+  --border-radius: 5px;
+  --table-header-bg: #002d58;
+  --table-header-color: #f0f4f8;
+  --table-cell-bg: #ffffff;
+  --table-cell-color: #002d58;
+  --table-cell-bg-alt: #ecdfcc;
+  --table-cell-bg-selected: #19a7ce;
+  --table-borders: #002d58;
 }
 
-html {
-  scroll-behavior: smooth;
+body.ModernSIS[id="Pink"] {
+  --primary-color: #ff6f61;
+  --secondary-color: #ffe4e1;
+  --text-color: #d32f2f;
+  --background-color: #ffe4e1;
+  --hover-color: #ffb6c1;
+  --box-shadow-color: rgba(255, 105, 97, 0.4);
+  --gradient-color: linear-gradient(135deg, #ffb6c1, #ff6f61);
+  --border-radius: 5px;
+  --table-header-bg: #d32f2f;
+  --table-header-color: #ffe4e1;
+  --table-cell-bg: #ffe4e1;
+  --table-cell-color: #d32f2f;
+  --table-cell-bg-alt: #ecdfcc;
+  --table-cell-bg-selected: #19a7ce;
+  --table-borders: #ecdfcc;
 }
 
-/* Target elements within the body with the ID ModernSIS_dark */
-body#ModernSIS_dark {
+body.ModernSIS[id="Grey"] {
+  --primary-color: #5B99C2;
+  --secondary-color: #95a5a6;
+  --text-color: #DDE6ED;
+  --background-color: #27374D;
+  --hover-color: #176b87;
+  --box-shadow-color: rgba(0, 0, 0, 0.5);
+  --gradient-color: linear-gradient(135deg, #2c3e50, #34495e);
+  --border-radius: 5px;
+  --table-header-bg: #634f36;
+  --table-header-color: #ecf0f1;
+  --table-cell-bg: #153448;
+  --table-cell-color: #ffffff;
+  --table-cell-bg-alt: #1e4864;
+  --table-cell-bg-selected: #928878;
+  --table-borders: #282623;
+}
+
+body.ModernSIS[id="Black"] {
+  --primary-color: #5B99C2;
+  --secondary-color: #333333;
+  --text-color: #DDE6ED;
+  --background-color: #1e1e1e;
+  --hover-color: #666666;
+  --box-shadow-color: rgba(0, 0, 0, 0.5);
+  --gradient-color: linear-gradient(135deg, #333333, #000000);
+  --border-radius: 5px;
+  --table-header-bg: #313240;
+  --table-header-color: #ffffff;
+  --table-cell-bg: #1e1e1e;
+  --table-cell-color: #ffffff;
+  --table-cell-bg-alt: #2f2f2f;
+  --table-cell-bg-selected: #0e5468;
+  --table-borders: #313240;
+}
+
+body.ModernSIS {
   background-color: var(--background-color) !important;
   color: var(--text-color) !important;
 }
 
-body#ModernSIS_dark #HeaderReg_imgBanner {
-  padding: 150px 200px 0px 0px !important;
+body.ModernSIS #HeaderReg_imgBanner {
+  padding: 150px 200px 0 0 !important;
   background: url("https://www.aou.edu.eg/assets/aou/images/slider/v2-03.jpg") !important;
   background-size: cover !important;
   content-visibility: hidden !important;
@@ -29,69 +84,65 @@ body#ModernSIS_dark #HeaderReg_imgBanner {
   width: -webkit-fill-available !important;
 }
 
-body#ModernSIS_dark h1,
-body#ModernSIS_dark h2,
-body#ModernSIS_dark h3,
-body#ModernSIS_dark h4,
-body#ModernSIS_dark h5,
-body#ModernSIS_dark h6 {
-  color: var(--primary-color);
+body.ModernSIS h1,
+body.ModernSIS h2,
+body.ModernSIS h3,
+body.ModernSIS h4,
+body.ModernSIS h5,
+body.ModernSIS h6 {
+  color: var(--text-color);
   text-shadow: 2px 2px 5px var(--box-shadow-color);
   animation: fadeInDown 1s ease-in-out;
   font-weight: bold;
 }
 
-body#ModernSIS_dark #Form1 h1 {
-  padding: 10px 0 10px 0px;
+body.ModernSIS #Form1 h1 {
+  padding: 10px 0;
   margin: 20px 0 0;
   text-align: center;
 }
 
-body#ModernSIS_dark .grid-item {
-  background-color: #34495e !important;
+body.ModernSIS .grid-item {
+  background-color: var(--background-color) !important;
   color: var(--text-color) !important;
   border: 1px solid var(--secondary-color) !important;
   border-radius: var(--border-radius) !important;
   box-shadow: 0 8px 20px var(--box-shadow-color) !important;
-  padding: 10px 20px 10px !important;
+  padding: 10px 20px !important;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-body#ModernSIS_dark .grid-item:hover {
+body.ModernSIS .grid-item:hover {
   box-shadow: 0 12px 30px var(--box-shadow-color);
   transform: translateY(-5px);
 }
 
-body#ModernSIS_dark .grid-item h4 {
+body.ModernSIS .grid-item h4 {
   margin-top: 10px;
 }
 
-body#ModernSIS_dark p {
+body.ModernSIS p {
   color: var(--text-color) !important;
 }
 
-body#ModernSIS_dark a {
-  color: var(--primary-color);
+body.ModernSIS a {
+  color: var(--primary-color) !important;
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
   border-radius: var(--border-radius);
 }
 
-body#ModernSIS_dark a:hover {
+body.ModernSIS a:hover {
   color: var(--hover-color);
   text-decoration: underline;
   transform: scale(1.1);
 }
 
-body#ModernSIS_dark font {
-  color: var(--text-color) !important;
-}
-
-body#ModernSIS_dark button,
-body#ModernSIS_dark input[type="button"],
-body#ModernSIS_dark input[type="submit"] {
+body.ModernSIS button,
+body.ModernSIS input[type="button"],
+body.ModernSIS input[type="submit"] {
   background: var(--gradient-color);
-  color: var(--primary-color);
+  color: var(--text-color);
   border: none;
   cursor: pointer;
   border-radius: var(--border-radius);
@@ -100,19 +151,19 @@ body#ModernSIS_dark input[type="submit"] {
     box-shadow 0.3s ease;
 }
 
-body#ModernSIS_dark button:hover,
-body#ModernSIS_dark input[type="button"]:hover,
-body#ModernSIS_dark input[type="submit"]:hover {
+body.ModernSIS button:hover,
+body.ModernSIS input[type="button"]:hover,
+body.ModernSIS input[type="submit"]:hover {
   background-color: var(--hover-color);
   transform: translateY(-2px);
   box-shadow: 0 6px 15px var(--box-shadow-color);
 }
 
-body#ModernSIS_dark input[type="text"],
-body#ModernSIS_dark input[type="email"],
-body#ModernSIS_dark input[type="password"],
-body#ModernSIS_dark textarea {
-  border: 1px solid var(--secondary-color);
+body.ModernSIS input[type="text"],
+body.ModernSIS input[type="email"],
+body.ModernSIS input[type="password"],
+body.ModernSIS textarea {
+  border: 1px solid var(--primary-color);
   border-radius: var(--border-radius);
   background-color: var(--background-color);
   color: var(--text-color);
@@ -120,22 +171,21 @@ body#ModernSIS_dark textarea {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-body#ModernSIS_dark input[type="text"]:focus,
-body#ModernSIS_dark input[type="email"]:focus,
-body#ModernSIS_dark input[type="password"]:focus,
-body#ModernSIS_dark textarea:focus {
-  border-color: var(--primary-color);
+body.ModernSIS input[type="text"]:focus,
+body.ModernSIS input[type="email"]:focus,
+body.ModernSIS input[type="password"]:focus,
+body.ModernSIS textarea:focus {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   outline: none;
 }
 
-body#ModernSIS_dark select {
+body.ModernSIS select {
   appearance: none;
   background-color: var(--background-color);
   color: var(--text-color);
   padding: 10px;
   border: 1px solid var(--secondary-color);
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -145,40 +195,84 @@ body#ModernSIS_dark select {
   background-size: 12px;
 }
 
-body#ModernSIS_dark select:focus {
+body.ModernSIS select:focus {
   border-color: var(--primary-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   outline: none;
 }
 
-body#ModernSIS_dark legend {
+body.ModernSIS legend {
   color: var(--text-color) !important;
 }
 
-body#ModernSIS_dark fieldset {
+body.ModernSIS fieldset {
   color: var(--text-color) !important;
   border-color: var(--text-color) !important;
 }
+/* TABLE START */
 
-body#ModernSIS_dark .NormGrid th {
-  background-color: #002d58 !important;
+body.ModernSIS td {
+  color: var(--text-color) !important;
+}
+
+body.ModernSIS a {
   color: var(--primary-color) !important;
+}
+
+body.ModernSIS .NormGrid {
+  border-color: var(--table-borders) !important;
+}
+
+body.ModernSIS .NormGrid th {
+  background-color: var(--table-header-bg) !important;
+  color: var(--table-header-color) !important;
   font-weight: bold !important;
+  border-color: var(--table-borders) !important;
 }
 
-body#ModernSIS_dark .NormGrid td {
-  background-color: var(--background-color) !important;
+body.ModernSIS .NormGrid td {
+  background-color: var(--table-cell-bg) !important;
+  color: var(--table-cell-color) !important;
+  border-color: var(--table-borders) !important;
 }
 
-body#ModernSIS_dark td {
-  color: var(--primary-color) !important;
+body.ModernSIS .NormGrid tr {
+  border-color: var(--table-borders) !important;
 }
 
-body#ModernSIS_dark table span,
-body#ModernSIS_dark table text {
-  color: var(--primary-color) !important;
+body.ModernSIS .NormGrid .alt {
+  background-color: var(--table-cell-bg-alt) !important;
 }
 
-body#ModernSIS_dark .sky_blue-bgcolor {
-  background-color: var(--background-color) !important;
+body.ModernSIS .NormGrid .alt td {
+  background-color: var(--table-cell-bg-alt) !important;
 }
+
+body.ModernSIS .selected td {
+  background-color: var(--table-cell-bg-selected) !important;
+}
+/* TABLE END */
+/* EXCEPTION START */
+body.ModernSIS #divGraduationCeremony img {
+  display: none !important;
+}
+
+body.ModernSIS #divStudentInfo font,
+body.ModernSIS #divPersonalData font,
+body.ModernSIS #SectionsHeaderRow span {
+  color: var(--text-color);
+}
+/* EXCEPTION END */
+/* LOGIN PAGE START */
+
+body.ModernSIS #pnlLogin {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.copyright {
+  width: 100%;
+}
+
+/* LOGIN PAGE END */
