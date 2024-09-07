@@ -7,17 +7,6 @@
 
 A Web extension that applies a modern dark mode theme to the AOU Student Information System (SIS) pages for a more comfortable, eye-friendly browsing experience during extended usage.
 
-## **Table of Contents**
-
-1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Usage](#usage)
-4. [Contributing](#contributing)
-5. [Code of Conduct](#code-of-conduct)
-6. [Acknowledgments](#acknowledgments)
-7. [License](#license)
-8. [Contact](#contact)
-
 ---
 
 ## **Introduction**
@@ -36,7 +25,7 @@ SIS Darkmode is designed to provide a visually appealing dark theme for the AOU 
 
 Once installed, SIS Darkmode will automatically activate the dark theme on any page under the specified SIS domains (`*.aou.edu.kw`).
 
-## **Contributing**
+## **Contributing** [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
 We welcome contributions to enhance the SIS Darkmode extension. To contribute:
 
