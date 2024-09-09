@@ -17,8 +17,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "changeTheme") {
     const theme = request.theme;
     chrome.storage.local.set({ theme: theme }, () => {
-      console.log("Theme preference saved:", theme); // TODO: remove log
+      applyTheme(theme);
     });
-    applyTheme(theme);
   }
 });

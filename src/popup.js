@@ -16,9 +16,7 @@ document.querySelectorAll('input[name="theme"]').forEach((radio) => {
           { action: "changeTheme", theme: selectedTheme },
           (response) => {
             if (chrome.runtime.lastError) {
-              console.log("Error sending message:", chrome.runtime.lastError);
-            } else {
-              console.log("Theme changed to:", selectedTheme);
+              console.warn("Whoops.. " + chrome.runtime.lastError.message);
             }
           }
         );
