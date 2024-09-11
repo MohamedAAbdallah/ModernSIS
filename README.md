@@ -6,7 +6,7 @@
 
 **License**: [GNU General Public License v3.0](LICENSE)
 
-ModernSIS is designed to provide a visually appealing dark theme for the AOU Student Information System (SIS) pages, specifically targeting the domains sisksa.aou.edu.kw and sis.aou.edu.kw. This extension enhances readability, reduces eye strain, and offers a modern look while preserving the SIS platform's original functionality.
+ModernSIS is designed to provide a visually appealing dark theme for the AOU Student Information System (SIS) pages, specifically targeting the domains `sisksa.aou.edu.kw` and `sis.aou.edu.kw`. This extension enhances readability, reduces eye strain, and offers a modern look while preserving the SIS platform's original functionality.
 
 ---
 
@@ -17,11 +17,36 @@ ModernSIS enhances the AOU Student Information System (SIS) pages with a modern,
 ## **Features**
 
 - 🎨 **Multiple Color Modes**: Three color modes to choose from, with new colors coming soon.
-- 🖥️ **Supports Multiple Pages**: Compatible with all AOU SIS Regions.
+- 🖥️ **Supports Multiple Pages**: Compatible with all AOU SIS regions.
 - 🚀 **Lightweight and Fast**: Minimal impact on browser performance.
 - 🔧 **Easy Installation and Use**: Quick setup with one-click installation from popular web stores.
 - 🔏 **Privacy Focused**: No personal data is ever read or written; only CSS code is altered.
-- 🚫 **Enhanced Security**: Automatically disables itself on financial, Reports, or exam-related pages to protect your privacy.
+- 🚫 **Enhanced Security**: Automatically disables itself on financial, reports, or exam-related pages to protect your privacy.
+
+## **Installation**
+
+### **Stable Release**
+
+To install the latest stable release of ModernSIS:
+
+1. Visit the [Chrome Web Store](https://chromewebstore.google.com/detail/modern-sis/eanhlljpacpbggaiijocfoapjbofdbfm) and click on "Add to Chrome."
+2. The extension will soon be available on the Edge Web Store — stay tuned!
+
+### **Development Releases**
+
+To install the latest development version of ModernSIS:
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/MohamedAAbdallah/ModernSIS.git
+   ```
+2. **Open Chrome and go to the Extensions page:**
+   - Enter `chrome://extensions/` in the address bar or click on the menu (three dots) > More Tools > Extensions.
+3. **Enable Developer Mode:**
+   - Toggle the "Developer mode" switch at the top right corner of the Extensions page.
+4. **Load the extension:**
+   - Click on "Load unpacked" and select the `\src\` folder from where you cloned the repository.
+5. The extension should now be installed and ready to use in development mode, enjoy!
 
 ## **Usage**
 
