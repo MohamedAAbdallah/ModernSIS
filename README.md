@@ -2,7 +2,8 @@
 
 ![ModernSIS Logo](src/icons/128.png)
 
-**Version**: 0.1.2
+**Version**: 0.1.2   [![CodeQL](https://github.com/MohamedAAbdallah/ModernSIS/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/MohamedAAbdallah/ModernSIS/actions/workflows/github-code-scanning/codeql)
+
 **License**: [GNU General Public License v3.0](LICENSE)
 
 ModernSIS is designed to provide a visually appealing dark theme for the AOU Student Information System (SIS) pages, specifically targeting the domains sisksa.aou.edu.kw and sis.aou.edu.kw. This extension enhances readability, reduces eye strain, and offers a modern look while preserving the SIS platform's original functionality.
@@ -11,7 +12,7 @@ ModernSIS is designed to provide a visually appealing dark theme for the AOU Stu
 
 ## **Introduction**
 
-ModernSIS enhances the AOU Student Information System (SIS) pages with a modern, eye-friendly dark theme, targeting the domains `sisksa.aou.edu.kw` and `sis.aou.edu.kw`. The extension now includes multiple color modes and improved privacy settings, while continuing to offer a sleek, modern browsing experience.
+ModernSIS enhances the AOU Student Information System (SIS) pages with a modern, eye-friendly dark theme, targeting the domains `sisksa.aou.edu.kw` and `sis.aou.edu.kw`. The extension now includes multiple color modes and improved privacy settings, while offering a sleek, modern browsing experience.
 
 ## **Features**
 
