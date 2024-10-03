@@ -1,6 +1,10 @@
 {
-  "github_star": {
+  "githubStar": {
     "message": "تابعنا علي جيت هاب!",
+    "description": "_"
+  },
+  "selectTheme": {
+    "message": "اختر الثيم:",
     "description": "_"
   }
 }
