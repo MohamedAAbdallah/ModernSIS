@@ -45,6 +45,10 @@
       "resources": ["modern.css"],
       "matches": ["https://*.aou.edu.kw/*"],
       "exclude_globs": ["*Report*", "*Exam*", "FinancialEGY"]
+    },
+    {
+      "resources": ["banners/*"],
+      "matches": ["https://*.aou.edu.kw/*"]
     }
   ]
 }
