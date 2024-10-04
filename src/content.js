@@ -9,9 +9,7 @@ function applyTheme(theme) {
     document.body.className = `ModernSIS`;
 
     const id = chrome.i18n.getMessage("@@extension_id");
-    console.log(id);
     const path = `chrome-extension://${id}/banners/${theme}.jpg`;
-    console.log(path);
     document.getElementById("HeaderReg_imgBanner").src = path;
   }
 }
