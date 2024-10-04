@@ -75,15 +75,6 @@ body.ModernSIS {
   color: var(--text-color) !important;
 }
 
-body.ModernSIS #HeaderReg_imgBanner {
-  padding: 150px 200px 0 0 !important;
-  background: url("https://www.aou.edu.eg/assets/aou/images/slider/v2-03.jpg") !important;
-  background-size: cover !important;
-  content-visibility: hidden !important;
-  height: 160px !important;
-  width: -webkit-fill-available !important;
-}
-
 body.ModernSIS h1,
 body.ModernSIS h2,
 body.ModernSIS h3,
