@@ -47,7 +47,7 @@
       "exclude_globs": ["*Report*", "*Exam*", "FinancialEGY"]
     },
     {
-      "resources": ["imgs/banners/*"],
+      "resources": ["imgs/*"],
       "matches": ["https://*.aou.edu.kw/*"]
     }
   ]
