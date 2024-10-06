@@ -8,7 +8,7 @@ body {
   justify-content: space-between;
   text-align: center;
   background-color: #1e1e1e;
-  color: #FFF;
+  color: #fff;
   width: 200px;
   height: 200px;
 }
@@ -54,7 +54,7 @@ img {
 }
 
 img:hover {
-  transform: scale(1.2); 
+  transform: scale(1.2);
 }
 
 svg {
