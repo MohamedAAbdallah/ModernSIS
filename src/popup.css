@@ -1,0 +1,62 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #1e1e1e;
+  color: #FFF;
+  width: 200px;
+  height: 200px;
+}
+
+h1 {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+h1 img {
+  margin-right: 10px;
+}
+
+p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 160px;
+  margin: 0;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s;
+}
+
+img:hover {
+  transform: scale(1.2); 
+}
+
+svg {
+  color: #dde6ed;
+}
