@@ -60,3 +60,11 @@ img:hover {
 svg {
   color: #dde6ed;
 }
+
+#Share {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
