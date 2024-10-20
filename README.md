@@ -2,7 +2,7 @@
 
 ![ModernSIS Logo](src/imgs/icons/128.png)
 
-**Version**: 0.4.0 [![CodeQL](https://github.com/MohamedAAbdallah/ModernSIS/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/MohamedAAbdallah/ModernSIS/actions/workflows/github-code-scanning/codeql)
+**Version**: 0.5.0 [![CodeQL](https://github.com/MohamedAAbdallah/ModernSIS/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/MohamedAAbdallah/ModernSIS/actions/workflows/github-code-scanning/codeql)
 
 **License**: [GNU General Public License v3.0](LICENSE)
 
