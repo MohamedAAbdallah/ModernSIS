@@ -4,108 +4,95 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modern SIS Dark Mode</title>
-    <style>
-      /* General styling for the popup */
-      body {
-        font-family: "Arial", sans-serif;
-        margin: 0;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background-color: #f3f4f6;
-        color: #333;
-        width: 200px;
-        height: 200px; /* Adjust height as needed */
-      }
-
-      h1 {
-        font-size: 18px;
-        margin-bottom: 15px;
-        display: flex;
-        align-items: center;
-      }
-
-      h1 img {
-        margin-right: 8px;
-      }
-
-      p {
-        font-size: 14px;
-        margin-bottom: 15px;
-      }
-
-      .radio-group {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        max-width: 160px;
-        margin: 0 auto;
-      }
-
-      label {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-      }
-
-      input[type="radio"] {
-        display: none;
-      }
-
-      img {
-        width: 32px;
-        height: 32px;
-        margin-right: 8px;
-        transition: transform 0.2s;
-      }
-
-      img:hover {
-        transform: scale(1.2); /* Slightly enlarge icon on hover */
-      }
-
-      a {
-        font-size: 12px;
-        text-decoration: none;
-        color: #007bff;
-        margin-top: 20px;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-    </style>
+    <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
-    <h1><img src="imgs/icons/32.png" alt="icon" /> Modern SIS</h1>
-    <p id="selectTheme"></p>
+    <h1><img src="imgs/icons/32.png" alt="icon" />Modern SIS</h1>
+    <p id="selectTheme">Select a theme:</p>
 
     <!-- Group radio buttons with flexbox -->
     <div class="radio-group">
-      <label>
+      <label title="No Theme">
         <input type="radio" name="theme" value="None" />
         <img src="imgs/icons/None.png" alt="None" width="32" height="32" />
       </label>
 
-      <label>
+      <label title="Modern White">
         <input type="radio" name="theme" value="White" />
         <img src="imgs/icons/White.png" alt="White" width="32" height="32" />
       </label>
 
-      <label>
+      <label title="Navy">
         <input type="radio" name="theme" value="Grey" />
         <img src="imgs/icons/Grey.png" alt="Grey" width="32" height="32" />
       </label>
 
-      <label>
+      <label title="Midnight Black">
         <input type="radio" name="theme" value="Black" />
         <img src="imgs/icons/128.png" alt="Black" width="32" height="32" />
       </label>
     </div>
-
-    <a href="https://github.com/MohamedAAbdallah/ModernSIS" id="githubStar"></a>
+    <div class="SocialMedia">
+      <a
+        href="https://github.com/MohamedAAbdallah/ModernSIS"
+        id="GitHub"
+        target="_blank"
+        title="GitHub"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13.325 3.05011L8.66741 20.4323L10.5993 20.9499L15.2568 3.56775L13.325 3.05011Z"
+            fill="currentColor"
+          />
+          <path
+            d="M7.61197 18.3608L8.97136 16.9124L8.97086 16.8933L3.87657 12.1121L8.66699 7.00798L7.20868 5.63928L1.04956 12.2017L7.61197 18.3608Z"
+            fill="currentColor"
+          />
+          <path
+            d="M16.388 18.3608L15.0286 16.9124L15.0291 16.8933L20.1234 12.1121L15.333 7.00798L16.7913 5.63928L22.9504 12.2017L16.388 18.3608Z"
+            fill="currentColor"
+          /></svg
+      ></a>
+      <a
+        href="https://www.facebook.com/Mohamed.Abdallah.rn/"
+        id="Facebook"
+        target="_blank"
+        title="Facebook"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.19795 21.5H13.198V13.4901H16.8021L17.198 9.50977H13.198V7.5C13.198 6.94772 13.6457 6.5 14.198 6.5H17.198V2.5H14.198C11.4365 2.5 9.19795 4.73858 9.19795 7.5V9.50977H7.19795L6.80206 13.4901H9.19795V21.5Z"
+            fill="currentColor"
+          />
+        </svg>
+      </a>
+      <!-- <button id="Share" title="Share">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18 9C19.6569 9 21 7.65685 21 6C21 4.34315 19.6569 3 18 3C16.3431 3 15 4.34315 15 6C15 6.12549 15.0077 6.24919 15.0227 6.37063L8.08261 9.84066C7.54305 9.32015 6.80891 9 6 9C4.34315 9 3 10.3431 3 12C3 13.6569 4.34315 15 6 15C6.80891 15 7.54305 14.6798 8.08261 14.1593L15.0227 17.6294C15.0077 17.7508 15 17.8745 15 18C15 19.6569 16.3431 21 18 21C19.6569 21 21 19.6569 21 18C21 16.3431 19.6569 15 18 15C17.1911 15 16.457 15.3202 15.9174 15.8407L8.97733 12.3706C8.99229 12.2492 9 12.1255 9 12C9 11.8745 8.99229 11.7508 8.97733 11.6294L15.9174 8.15934C16.457 8.67985 17.1911 9 18 9Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button> -->
+    </div>
 
     <!-- Reference the external JavaScript file -->
     <script src="popup.js"></script>

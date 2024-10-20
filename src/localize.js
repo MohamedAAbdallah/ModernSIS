@@ -15,7 +15,6 @@ function localizeElementById(elementId, messageKey) {
 document.addEventListener("DOMContentLoaded", function () {
   const elementsToLocalize = [
     { id: "selectTheme", messageKey: "selectTheme" },
-    { id: "githubStar", messageKey: "githubStar" },
   ];
 
   elementsToLocalize.forEach(({ id, messageKey }) => {

@@ -1,3 +1,11 @@
+function share() {
+  const link =
+    "https://chromewebstore.google.com/detail/modern-sis/eanhlljpacpbggaiijocfoapjbofdbfm";
+  navigator.clipboard.writeText(link);
+}
+
+document.getElementById("Share").addEventListener("click", share);
+
 chrome.storage.local.get("theme", (data) => {
   const theme = data.theme || "None";
   document.querySelector(
