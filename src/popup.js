@@ -4,7 +4,7 @@ function share() {
   navigator.clipboard.writeText(link);
 }
 
-document.getElementById("Share").addEventListener("click", share);
+// document.getElementById("Share").addEventListener("click", share);
 
 chrome.storage.local.get("theme", (data) => {
   const theme = data.theme || "None";
