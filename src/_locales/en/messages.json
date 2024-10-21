@@ -1,10 +1,23 @@
 {
-  "githubStar": {
-    "message": "Star us on GitHub!",
-    "description": "_"
-  },
   "selectTheme": {
-    "message": "Select a Theme:",
-    "description": "_"
+    "message": "Select a Theme:"
+  },
+  "no_theme": {
+    "message": "No Theme"
+  },
+  "white": {
+    "message": "Modern White"
+  },
+  "grey": {
+    "message": "Slate Grey"
+  },
+  "black": {
+    "message": "Midnight Black"
+  },
+  "github": {
+    "message": "Visit GitHub!"
+  },
+  "facebook": {
+    "message": "Follow us on Facebook!"
   }
 }

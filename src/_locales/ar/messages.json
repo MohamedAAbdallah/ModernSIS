@@ -1,10 +1,23 @@
 {
-  "githubStar": {
-    "message": "!تابعنا علي جيت هاب",
-    "description": "_"
-  },
   "selectTheme": {
-    "message": ":اختر الثيم",
-    "description": "_"
+    "message": ":اختر الثيم"
+  },
+  "no_theme": {
+    "message": "من غير ثيم"
+  },
+  "white": {
+    "message": "ابيض مودرن"
+  },
+  "grey": {
+    "message": "كحلي غامق"
+  },
+  "black": {
+    "message": "اسود رايق"
+  },
+  "github": {
+    "message": "!تنورنا علي جيت هاب"
+  },
+  "facebook": {
+    "message": "!تنورني علي فيسبوك"
   }
 }

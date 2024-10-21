@@ -68,3 +68,16 @@ svg {
   padding: 0;
   cursor: pointer;
 }
+
+#message {
+  transition: opacity 0.1s ease;
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
