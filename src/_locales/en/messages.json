@@ -1,10 +1,8 @@
 {
   "githubStar": {
-    "message": "Star us on GitHub!",
-    "description": "_"
+    "message": "Star us on GitHub!"
   },
   "selectTheme": {
-    "message": "Select a Theme:",
-    "description": "_"
+    "message": "Select a Theme:"
   }
 }
