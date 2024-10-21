@@ -60,7 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
     radio.addEventListener("change", function () {
       const selectedTheme = this.value;
 
-      chrome.action.setIcon({ path: `imgs/icons/${selectedTheme}.png` });
+      if (selectedTheme == "Black") {
+        chrome.action.setIcon({ path: `imgs/icons/128.png` });
+      } else {
+        chrome.action.setIcon({ path: `imgs/icons/${selectedTheme}.png` });
+      }
 
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         if (tabs.length > 0) {
