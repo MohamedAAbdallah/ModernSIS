@@ -6,6 +6,29 @@ function share() {
 
 // document.getElementById("Share").addEventListener("click", share);
 
+document.addEventListener("DOMContentLoaded", function () {
+  const messageElement = document.getElementById("message");
+
+  function handleMouseEvent(event) {
+    const text = event.currentTarget.dataset.alt || "_";
+    switch (event.type) {
+      case "mouseover":
+        messageElement.textContent = text;
+        messageElement.style.fontWeight = "bold";
+        break;
+      case "mouseout":
+        messageElement.textContent = "Mohamed A. Abdallah | 2024";
+        messageElement.style.fontWeight = "normal";
+        break;
+    }
+  }
+
+  document.querySelectorAll("label, a").forEach((element) => {
+    element.addEventListener("mouseover", handleMouseEvent);
+    element.addEventListener("mouseout", handleMouseEvent);
+  });
+});
+
 chrome.storage.local.get("theme", (data) => {
   const theme = data.theme || "None";
   document.querySelector(
