@@ -14,30 +14,32 @@ const DEFAULT_MESSAGE = "Mohamed A. Abdallah | 2024";
 //     });
 // }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const messageElement = document.getElementById("message");
 
-  function handleMouseEvent(event) {
-    const text = chrome.i18n.getMessage(event.currentTarget.dataset.alt);
-    if (event.type === "mouseover") {
-      messageElement.textContent = text;
-      messageElement.style.fontWeight = "bold";
-    } else {
-      messageElement.textContent = DEFAULT_MESSAGE;
-      messageElement.style.fontWeight = "normal";
-    }
-  }
+  const handleMouseEvent = (event) => {
+    const text =
+      chrome.i18n.getMessage(event.currentTarget.dataset.alt) ||
+      DEFAULT_MESSAGE;
+    messageElement.textContent =
+      event.type === "mouseover" ? text : DEFAULT_MESSAGE;
+    messageElement.style.fontWeight =
+      event.type === "mouseover" ? "bold" : "normal";
+  };
 
-  document.querySelectorAll("label, a").forEach((element) => {
+  document.querySelectorAll("[data-alt]").forEach((element) => {
     element.addEventListener("mouseover", handleMouseEvent);
     element.addEventListener("mouseout", handleMouseEvent);
   });
 
   chrome.storage.local.get("theme", (data) => {
     const theme = data.theme || "None";
-    document.querySelector(
+    const themeRadio = document.querySelector(
       `input[name="theme"][value="${theme}"]`
-    ).checked = true;
+    );
+    if (themeRadio) {
+      themeRadio.checked = true;
+    }
   });
 
   document.querySelectorAll('input[name="theme"]').forEach((radio) => {
