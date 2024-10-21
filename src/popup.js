@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const messageElement = document.getElementById("message");
 
   function handleMouseEvent(event) {
-    const text = event.currentTarget.dataset.alt || "_";
+    const text = chrome.i18n.getMessage(event.currentTarget.dataset.alt);
     switch (event.type) {
       case "mouseover":
         messageElement.textContent = text;
