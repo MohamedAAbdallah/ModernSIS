@@ -28,13 +28,13 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
 });
 
-document.getElementById("Share").addEventListener("click", async () => {
-  const link =
-    "https://chromewebstore.google.com/detail/modern-sis/eanhlljpacpbggaiijocfoapjbofdbfm?";
-  try {
-    await navigator.clipboard.writeText(link);
-    alert("Link copied to clipboard: " + link);
-  } catch (err) {
-    console.error("Failed to copy the link: ", err);
-  }
-});
+// document.getElementById("Share").addEventListener("click", async () => {
+//   const link =
+//     "https://chromewebstore.google.com/detail/modern-sis/eanhlljpacpbggaiijocfoapjbofdbfm?";
+//   try {
+//     await navigator.clipboard.writeText(link);
+//     alert("Link copied to clipboard: " + link);
+//   } catch (err) {
+//     console.error("Failed to copy the link: ", err);
+//   }
+// });
