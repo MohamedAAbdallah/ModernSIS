@@ -21,10 +21,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const text =
       chrome.i18n.getMessage(event.currentTarget.dataset.alt) ||
       DEFAULT_MESSAGE;
-    messageElement.textContent =
-      event.type === "mouseover" ? text : DEFAULT_MESSAGE;
-    messageElement.style.fontWeight =
-      event.type === "mouseover" ? "bold" : "normal";
+
+    messageElement.classList.add("fade-out");
+
+    setTimeout(() => {
+      messageElement.textContent =
+        event.type === "mouseover" ? text : DEFAULT_MESSAGE;
+
+      messageElement.classList.remove("fade-out");
+      messageElement.classList.add("fade-in");
+    }, 100);
+
+    if (event.type === "mouseout") {
+      setTimeout(() => {
+        messageElement.textContent = DEFAULT_MESSAGE;
+        messageElement.classList.remove("fade-in");
+        messageElement.classList.add("fade-out");
+      }, 100);
+    }
   };
 
   document.querySelectorAll("[data-alt]").forEach((element) => {
