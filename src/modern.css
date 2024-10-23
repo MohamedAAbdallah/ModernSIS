@@ -1,4 +1,4 @@
-body.ModernSIS[id="White"] {
+body.ModernSIS[id="white"] {
   --primary-color: #603f26;
   --secondary-color: #f0f4f8;
   --text-color: #333333;
@@ -34,7 +34,7 @@ body.ModernSIS[id="Pink"] {
   --table-borders: #ecdfcc;
 }
 
-body.ModernSIS[id="Grey"] {
+body.ModernSIS[id="navy"] {
   --primary-color: #5b99c2;
   --secondary-color: #95a5a6;
   --text-color: #dde6ed;
@@ -52,7 +52,7 @@ body.ModernSIS[id="Grey"] {
   --table-borders: #282623;
 }
 
-body.ModernSIS[id="Black"] {
+body.ModernSIS[id="black"] {
   --primary-color: #5b99c2;
   --secondary-color: #333333;
   --text-color: #dde6ed;

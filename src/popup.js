@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   chrome.storage.local.get("theme", (data) => {
-    const theme = data.theme || "None";
+    const theme = data.theme || "off";
     const themeRadio = document.querySelector(
       `input[name="theme"][value="${theme}"]`
     );
@@ -59,6 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('input[name="theme"]').forEach((radio) => {
     radio.addEventListener("change", function () {
       const selectedTheme = this.value;
+
+      // TODO: implement full path logic not just 128 pixels
+      if (selectedTheme == "off") {
+        chrome.action.setIcon({ path: `imgs/icons/128/off.png` });
+      } else {
+        chrome.action.setIcon({ path: `imgs/icons/128/${selectedTheme.toLowerCase()}.png` });
+      }
 
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         if (tabs.length > 0) {
