@@ -2,7 +2,7 @@ function applyTheme(theme) {
   const id = chrome.i18n.getMessage("@@extension_id");
   const imgBanner = document.getElementById("HeaderReg_imgBanner");
 
-  if (theme === "None") {
+  if (theme === "off") {
     document.body.id = "";
     document.body.className = "";
     imgBanner.src = "images/header-5.jpg";
@@ -14,7 +14,7 @@ function applyTheme(theme) {
 }
 
 chrome.storage.local.get("theme", (data) => {
-  applyTheme(data.theme || "None");
+  applyTheme(data.theme || "off");
 });
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
