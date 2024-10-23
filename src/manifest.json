@@ -24,18 +24,18 @@
     "default_title": "Modern SIS",
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "imgs/icons/16.png",
-      "32": "imgs/icons/32.png",
-      "48": "imgs/icons/48.png",
-      "128": "imgs/icons/128.png"
+      "16": "imgs/icons/16/black.png",
+      "32": "imgs/icons/32/black.png",
+      "48": "imgs/icons/48/black.png",
+      "128": "imgs/icons/128/black.png"
     }
   },
 
   "icons": {
-    "16": "imgs/icons/16.png",
-    "32": "imgs/icons/32.png",
-    "48": "imgs/icons/48.png",
-    "128": "imgs/icons/128.png"
+    "16": "imgs/icons/16/black.png",
+    "32": "imgs/icons/32/black.png",
+    "48": "imgs/icons/48/black.png",
+    "128": "imgs/icons/128/black.png"
   },
   "author": "mohamednow25@gmail.com",
   "homepage_url": "https://github.com/MohamedAAbdallah/ModernSIS",

@@ -60,10 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
     radio.addEventListener("change", function () {
       const selectedTheme = this.value;
 
-      if (selectedTheme == "Black") {
-        chrome.action.setIcon({ path: `imgs/icons/128.png` });
+      // TODO: implement full path logic not just 128 pixels
+      if (selectedTheme == "None") {
+        chrome.action.setIcon({ path: `imgs/icons/128/off.png` });
       } else {
-        chrome.action.setIcon({ path: `imgs/icons/${selectedTheme}.png` });
+        chrome.action.setIcon({ path: `imgs/icons/128/${selectedTheme.toLowerCase()}.png` });
       }
 
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
