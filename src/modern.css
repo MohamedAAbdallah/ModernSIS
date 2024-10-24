@@ -17,21 +17,21 @@ body.ModernSIS[id="white"] {
 }
 
 body.ModernSIS[id="pink"] {
-  --primary-color: #ff6f61;
-  --secondary-color: #ffe4e1;
-  --text-color: #d32f2f;
-  --background-color: #ffe4e1;
-  --hover-color: #ffb6c1;
-  --box-shadow-color: rgba(255, 105, 97, 0.4);
-  --gradient-color: linear-gradient(135deg, #ffb6c1, #ff6f61);
-  --border-radius: 5px;
-  --table-header-bg: #d32f2f;
-  --table-header-color: #ffe4e1;
-  --table-cell-bg: #ffe4e1;
-  --table-cell-color: #d32f2f;
-  --table-cell-bg-alt: #ecdfcc;
-  --table-cell-bg-selected: #19a7ce;
-  --table-borders: #ecdfcc;
+  --primary-color: #ff5c8d;
+  --secondary-color: #ffe1f0;
+  --text-color: #880e4f;
+  --background-color: #fff5f7;
+  --hover-color: #ff8ab3;
+  --box-shadow-color: rgba(255, 92, 141, 0.3);
+  --gradient-color: linear-gradient(135deg, #ff6f61, #ff5c8d);
+  --border-radius: 10px;
+  --table-header-bg: #880e4f;
+  --table-header-color: #ffe1f0;
+  --table-cell-bg: #ffe1f0;
+  --table-cell-color: #880e4f;
+  --table-cell-bg-alt: #f8bbd0;
+  --table-cell-bg-selected: #ff5c8d;
+  --table-borders: #f48fb1;
 }
 
 body.ModernSIS[id="navy"] {
@@ -86,7 +86,9 @@ body.ModernSIS h6 {
   animation: fadeInDown 1s ease-in-out;
   font-weight: bold;
 }
-
+body.ModernSIS #Table1 {
+  border: 0 !important;
+}
 body.ModernSIS #Form1 h1 {
   padding: 10px 0;
   margin: 20px 0 0;
