@@ -79,14 +79,14 @@ document.addEventListener("DOMContentLoaded", () => {
     radio.addEventListener("change", function () {
       const selectedTheme = this.value;
 
-      // TODO: implement full path logic not just 128 pixels
-      if (selectedTheme == "off") {
-        chrome.action.setIcon({ path: `imgs/icons/128/off.png` });
-      } else {
-        chrome.action.setIcon({
-          path: `imgs/icons/128/${selectedTheme.toLowerCase()}.png`,
-        });
-      }
+      const selectedIcons = {
+        16: `imgs/icons/16/${selectedTheme}.png`,
+        32: `imgs/icons/32/${selectedTheme}.png`,
+        48: `imgs/icons/48/${selectedTheme}.png`,
+        128: `imgs/icons/128/${selectedTheme}.png`,
+      };
+
+      chrome.action.setIcon({ path: selectedIcons });
 
       chrome.tabs.query({ url: "*://*.aou.edu.kw/*" }, (tabs) => {
         for (let i = 0; i < tabs.length; i++) {
