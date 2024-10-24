@@ -4,27 +4,23 @@ const DEFAULT_MESSAGE = "Mohamed A. Abdallah | 2024";
 
 function share() {
   const shareElement = document.getElementById("share");
-  const messageElement = document.getElementById("message");
-  const copiedElement = document.getElementById("copied");
+  const footerElement = document.getElementById("footer");
 
   navigator.clipboard
     .writeText(SHARE_LINK)
     .then(() => {
       shareElement.classList.add("clicked");
-      messageElement.style.display = "none";
-      copiedElement.style.display = "block";
+      footerElement.classList.add("copied");
 
       setTimeout(() => {
         shareElement.classList.remove("clicked");
-        messageElement.style.display = "block";
-        copiedElement.style.display = "none";
+        footerElement.classList.remove("copied");
       }, 1000);
     })
     .catch((err) => {
       console.error("Failed to copy: ", err);
       shareElement.classList.remove("clicked");
-      copiedElement.style.display = "none";
-      messageElement.style.display = "block";
+      footerElement.classList.remove("copied");
     });
 }
 
@@ -79,14 +75,14 @@ document.addEventListener("DOMContentLoaded", () => {
     radio.addEventListener("change", function () {
       const selectedTheme = this.value;
 
-      // TODO: implement full path logic not just 128 pixels
-      if (selectedTheme == "off") {
-        chrome.action.setIcon({ path: `imgs/icons/128/off.png` });
-      } else {
-        chrome.action.setIcon({
-          path: `imgs/icons/128/${selectedTheme.toLowerCase()}.png`,
-        });
-      }
+      const selectedIcons = {
+        16: `imgs/icons/16/${selectedTheme}.png`,
+        32: `imgs/icons/32/${selectedTheme}.png`,
+        48: `imgs/icons/48/${selectedTheme}.png`,
+        128: `imgs/icons/128/${selectedTheme}.png`,
+      };
+
+      chrome.action.setIcon({ path: selectedIcons });
 
       chrome.tabs.query({ url: "*://*.aou.edu.kw/*" }, (tabs) => {
         for (let i = 0; i < tabs.length; i++) {
@@ -95,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
             { action: "changeTheme", theme: selectedTheme },
             (response) => {
               if (chrome.runtime.lastError) {
-                console.warn("Error: " + chrome.runtime.lastError.message);
               }
             }
           );

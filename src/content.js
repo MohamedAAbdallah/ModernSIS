@@ -25,3 +25,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  chrome.storage.local.get("theme", (data) => {
+    applyTheme(data.theme || "off");
+  });
+});

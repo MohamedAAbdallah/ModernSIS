@@ -110,6 +110,22 @@ img {
   opacity: 1;
 }
 
+#footer #message {
+  display: block;
+}
+
+#footer #copied {
+  display: none;
+}
+
+#footer.copied #message {
+  display: none;
+}
+
+#footer.copied #copied {
+  display: block;
+}
+
 .fade-out {
   opacity: 0;
 }
