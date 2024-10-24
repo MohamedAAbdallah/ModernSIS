@@ -19,5 +19,11 @@
   },
   "facebook": {
     "message": "Follow us on Facebook!"
+  },
+  "share": {
+    "message": "Copy link to Share us!"
+  },
+  "copied": {
+    "message": "Copied to clipboard!"
   }
 }

@@ -57,16 +57,52 @@ img {
   transform: scale(1.2);
 }
 
-svg {
+.SocialMedia svg {
+  margin-left: 1px;
+  margin-right: 1px;
   color: #dde6ed;
 }
 
-#Share {
+#share {
   background-color: transparent;
   border: none;
   margin: 0;
   padding: 0;
   cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#share #pre,
+#share #hover,
+#share #checked {
+  display: block;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Add transitions for opacity and scale */
+}
+
+#share #hover,
+#share #checked {
+  opacity: 0;
+  display: none;
+}
+
+#share:hover #pre {
+  opacity: 0;
+  display: none;
+}
+
+#share:hover #hover {
+  opacity: 1;
+  display: block;
+}
+
+#share.clicked #pre,
+#share.clicked #hover {
+  display: none;
+}
+
+#share.clicked #checked {
+  opacity: 1;
+  display: block;
 }
 
 #message {

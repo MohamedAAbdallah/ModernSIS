@@ -2,19 +2,36 @@ const SHARE_LINK =
   "https://chromewebstore.google.com/detail/modern-sis/eanhlljpacpbggaiijocfoapjbofdbfm";
 const DEFAULT_MESSAGE = "Mohamed A. Abdallah | 2024";
 
-// function share() {
-//   navigator.clipboard
-//     .writeText(SHARE_LINK)
-//     .then(() => {
-//       // Optional: Provide user feedback, e.g., alert or change messageElement text
-//       console.log("Link copied to clipboard!");
-//     })
-//     .catch((err) => {
-//       console.error("Failed to copy: ", err);
-//     });
-// }
+function share() {
+  const shareElement = document.getElementById("share");
+  const messageElement = document.getElementById("message");
+  const copiedElement = document.getElementById("copied");
+
+  navigator.clipboard
+    .writeText(SHARE_LINK)
+    .then(() => {
+      shareElement.classList.add("clicked");
+      messageElement.style.display = "none";
+      copiedElement.style.display = "block";
+
+      setTimeout(() => {
+        shareElement.classList.remove("clicked");
+        messageElement.style.display = "block";
+        copiedElement.style.display = "none";
+      }, 1000);
+    })
+    .catch((err) => {
+      console.error("Failed to copy: ", err);
+      shareElement.classList.remove("clicked");
+      copiedElement.style.display = "none";
+      messageElement.style.display = "block";
+    });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
+  const copiedElement = document.getElementById("copied");
+  copiedElement.textContent = chrome.i18n.getMessage("copied");
+
   const messageElement = document.getElementById("message");
 
   const handleMouseEvent = (event) => {
@@ -46,6 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
     element.addEventListener("mouseout", handleMouseEvent);
   });
 
+  document.getElementById("share").addEventListener("click", share);
+
   chrome.storage.local.get("theme", (data) => {
     const theme = data.theme || "off";
     const themeRadio = document.querySelector(
@@ -64,7 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (selectedTheme == "off") {
         chrome.action.setIcon({ path: `imgs/icons/128/off.png` });
       } else {
-        chrome.action.setIcon({ path: `imgs/icons/128/${selectedTheme.toLowerCase()}.png` });
+        chrome.action.setIcon({
+          path: `imgs/icons/128/${selectedTheme.toLowerCase()}.png`,
+        });
       }
 
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
