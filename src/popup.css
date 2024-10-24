@@ -93,12 +93,12 @@ svg {
   display: block;
 }
 
-#share.active #pre,
-#share.active #hover {
+#share.clicked #pre,
+#share.clicked #hover {
   display: none;
 }
 
-#share.active #checked {
+#share.clicked #checked {
   opacity: 1;
   display: block;
 }
