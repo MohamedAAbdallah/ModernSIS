@@ -67,6 +67,40 @@ svg {
   margin: 0;
   padding: 0;
   cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#share #pre,
+#share #hover,
+#share #checked {
+  display: block;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Add transitions for opacity and scale */
+}
+
+#share #hover,
+#share #checked {
+  opacity: 0;
+  display: none;
+}
+
+#share:hover #pre {
+  opacity: 0;
+  display: none;
+}
+
+#share:hover #hover {
+  opacity: 1;
+  display: block;
+}
+
+#share.active #pre,
+#share.active #hover {
+  display: none;
+}
+
+#share.active #checked {
+  opacity: 1;
+  display: block;
 }
 
 #message {
