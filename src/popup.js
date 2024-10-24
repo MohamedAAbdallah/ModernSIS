@@ -3,17 +3,31 @@ const SHARE_LINK =
 const DEFAULT_MESSAGE = "Mohamed A. Abdallah | 2024";
 
 function share() {
+  const copiedElement = document.getElementById("copied");
+  const messageElement = document.getElementById("message");
+
   navigator.clipboard
     .writeText(SHARE_LINK)
     .then(() => {
-      console.log("Link copied to clipboard!");
+      messageElement.style.display = "none";
+      copiedElement.style.display = "block";
+
+      setTimeout(() => {
+        copiedElement.style.display = "none";
+        messageElement.style.display = "block";
+      }, 1000);
     })
     .catch((err) => {
       console.error("Failed to copy: ", err);
+      copiedElement.style.display = "none";
+      messageElement.style.display = "block";
     });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const copiedElement = document.getElementById("copied");
+  copiedElement.textContent = chrome.i18n.getMessage("copied");
+
   const messageElement = document.getElementById("message");
 
   const handleMouseEvent = (event) => {
