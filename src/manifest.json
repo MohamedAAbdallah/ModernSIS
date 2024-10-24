@@ -3,7 +3,7 @@
   "name": "Modern SIS",
   "version": "0.5.4",
   "description": "A Web extension that applies a modern dark mode theme to the AOU Student Information System (SIS).",
-  "permissions": ["storage"],
+  "permissions": ["storage", "tabs"],
   "default_locale": "en",
   "content_scripts": [
     {

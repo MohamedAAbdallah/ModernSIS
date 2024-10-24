@@ -88,10 +88,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
 
-      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        if (tabs.length > 0) {
+      chrome.tabs.query({ url: "*://*.aou.edu.kw/*" }, (tabs) => {
+        for (let i = 0; i < tabs.length; i++) {
           chrome.tabs.sendMessage(
-            tabs[0].id,
+            tabs[i].id,
             { action: "changeTheme", theme: selectedTheme },
             (response) => {
               if (chrome.runtime.lastError) {
