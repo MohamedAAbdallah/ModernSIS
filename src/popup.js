@@ -95,7 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
             { action: "changeTheme", theme: selectedTheme },
             (response) => {
               if (chrome.runtime.lastError) {
-                console.warn("Error: " + chrome.runtime.lastError.message);
               }
             }
           );
