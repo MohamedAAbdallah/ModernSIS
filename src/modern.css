@@ -69,6 +69,23 @@ body.ModernSIS[id="black"] {
   --table-cell-bg-selected: #0e5468;
   --table-borders: #313240;
 }
+body.ModernSIS[id="catppuccin"] {
+  --primary-color: #d1b28e;
+  --secondary-color: #444b6a;
+  --text-color: #c6c8d1;
+  --background-color: #1e1e2e;
+  --hover-color: #89b4fa;
+  --box-shadow-color: rgba(28, 27, 45, 0.2);
+  --gradient-color: linear-gradient(135deg, #f4dbd6, #b4befe);
+  --border-radius: 5px;
+  --table-header-bg: #575268;
+  --table-header-color: #f5e0dc;
+  --table-cell-bg: #1e1e2e;
+  --table-cell-color: #f5e0dc;
+  --table-cell-bg-alt: #302d41;
+  --table-cell-bg-selected: #a6e3a1;
+  --table-borders: #575268;
+}
 
 body.ModernSIS {
   background-color: var(--background-color) !important;
