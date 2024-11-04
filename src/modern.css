@@ -138,14 +138,13 @@ body.ModernSIS p {
 body.ModernSIS a {
   color: var(--primary-color) !important;
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
   border-radius: var(--border-radius);
 }
 
 body.ModernSIS a:hover {
   color: var(--hover-color);
   text-decoration: underline;
-  transform: scale(1.1);
 }
 
 body.ModernSIS button,
