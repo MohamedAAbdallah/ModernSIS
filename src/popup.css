@@ -32,7 +32,7 @@ p {
 .radio-group {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   width: 58%;
   max-width: 160px;
   margin: 0;
