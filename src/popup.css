@@ -1,5 +1,5 @@
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Segoe UI", sans-serif;
   margin: 0;
   padding: 20px;
   display: flex;
@@ -25,7 +25,7 @@ h1 img {
 }
 
 p {
-  font-size: 14px;
+  font-size: 11px;
   margin: 0;
 }
 
@@ -117,6 +117,7 @@ img {
 }
 
 #message {
+  font-size: 10px;
   transition: opacity 0.1s ease;
   opacity: 1;
 }
