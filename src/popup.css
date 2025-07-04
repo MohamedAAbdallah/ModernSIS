@@ -31,10 +31,16 @@ p {
 
 .radio-group {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
+  width: 58%;
   max-width: 160px;
   margin: 0;
+}
+
+.radio-group label {
+  margin: 3px;
+
 }
 
 label {
