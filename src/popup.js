@@ -1,6 +1,6 @@
 const SHARE_LINK =
   "https://chromewebstore.google.com/detail/modern-sis/eanhlljpacpbggaiijocfoapjbofdbfm";
-const DEFAULT_MESSAGE = "Mohamed A. Abdallah | 2024";
+const DEFAULT_MESSAGE = "Mohamed A. Abdallah";
 
 function share() {
   const shareElement = document.getElementById("share");
