@@ -112,6 +112,11 @@ body.ModernSIS #Form1 h1 {
   text-align: center;
 }
 
+body.ModernSIS .grid-container { 
+  /* TODO: rewrite grid for Future Updates */
+  grid-template-columns: auto auto !important;
+}
+
 body.ModernSIS .grid-item {
   background-color: var(--background-color) !important;
   color: var(--text-color) !important;
