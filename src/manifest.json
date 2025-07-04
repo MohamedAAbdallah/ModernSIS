@@ -10,11 +10,6 @@
       "matches": ["https://sis.aou.edu.kw/*", "https://sisksa.aou.edu.kw/*"],
       "exclude_globs": ["*Report*", "*Exam*", "FinancialEGY"],
       "css": ["modern.css"],
-      "all_frames": true
-    },
-    {
-      "matches": ["https://sis.aou.edu.kw/*", "https://sisksa.aou.edu.kw/*"],
-      "exclude_globs": ["*Report*", "*Exam*", "FinancialEGY"],
       "js": ["content.js"],
       "run_at": "document_start",
       "all_frames": true
