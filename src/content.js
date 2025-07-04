@@ -9,6 +9,20 @@ function applyTheme(theme) {
   } else {
     document.body.id = theme;
     document.body.className = "ModernSIS";
+    const bannerExists = new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve(true);
+      img.onerror = () => resolve(false);
+      img.src = `chrome-extension://${id}/imgs/banners/${theme}.jpg`;
+    });
+    bannerExists.then((exists) => {
+      if (exists) {
+        imgBanner.src = `chrome-extension://${id}/imgs/banners/${theme}.jpg`;
+      } else {
+        console.warn(`Banner image for theme "${theme}" does not exist.`);
+        imgBanner.src = `chrome-extension://${id}/imgs/banners/White.jpg`;
+      }
+    });
     imgBanner.src = `chrome-extension://${id}/imgs/banners/${theme}.jpg`;
   }
 }
