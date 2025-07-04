@@ -63,6 +63,11 @@ img {
   color: #dde6ed;
 }
 
+.SocialMedia a {
+  text-decoration: none;
+  color: transparent;
+}
+
 #share {
   background-color: transparent;
   border: none;
