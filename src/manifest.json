@@ -7,13 +7,13 @@
   "default_locale": "en",
   "content_scripts": [
     {
-      "matches": ["*://*.aou.edu.kw/*"],
+      "matches": ["https://sis.aou.edu.kw/*", "https://sisksa.aou.edu.kw/*"],
       "exclude_globs": ["*Report*", "*Exam*", "FinancialEGY"],
       "css": ["modern.css"],
       "all_frames": true
     },
     {
-      "matches": ["*://*.aou.edu.kw/*"],
+      "matches": ["https://sis.aou.edu.kw/*", "https://sisksa.aou.edu.kw/*"],
       "exclude_globs": ["*Report*", "*Exam*", "FinancialEGY"],
       "js": ["content.js"],
       "run_at": "document_start",
