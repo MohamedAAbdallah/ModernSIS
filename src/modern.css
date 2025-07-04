@@ -229,10 +229,6 @@ body.ModernSIS td {
   color: var(--text-color) !important;
 }
 
-body.ModernSIS a {
-  color: var(--primary-color) !important;
-}
-
 body.ModernSIS .NormGrid {
   border-color: var(--table-borders) !important;
 }
