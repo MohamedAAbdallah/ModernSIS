@@ -14,14 +14,10 @@ body {
 }
 
 h1 {
-  font-size: 18px;
+  font-size: 24px;
   display: flex;
   align-items: center;
-  margin-bottom: 0;
-}
-
-h1 img {
-  margin-right: 10px;
+  margin: 0;
 }
 
 p {
