@@ -91,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { action: "changeTheme", theme: selectedTheme },
             (response) => {
               if (chrome.runtime.lastError) {
+                // ignore the error if the tab is not available
               }
             }
           );
