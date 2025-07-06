@@ -1,0 +1,35 @@
+name: 🛑 Check Version Bump
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  version-check:
+    name: 🔍 Ensure manifest version bump
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout base branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.base_ref }}
+          path: base
+
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          path: pr
+
+      - name: Compare versions in manifest.json
+        run: |
+          base_version=$(jq -r '.version' base/src/manifest.json)
+          pr_version=$(jq -r '.version' pr/src/manifest.json)
+
+          echo "Base version: $base_version"
+          echo "PR version:   $pr_version"
+
+          if [ "$base_version" = "$pr_version" ]; then
+            echo "::error ::src/manifest.json version must be bumped in this pull request."
+            exit 1
+          fi
