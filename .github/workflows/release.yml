@@ -1,0 +1,31 @@
+name: Release Extension to Chrome Web Store
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    name: Upload & Publish to Chrome Web Store
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Zip extension
+        run: |
+          cd src
+          zip -r ../extension.zip .
+          cd ..
+
+      - name: Upload to Chrome Web Store
+        uses: PlasmoHQ/chrome-upload-action@v1
+        with:
+          client_id: ${{ secrets.CHROME_CLIENT_ID }}
+          client_secret: ${{ secrets.CHROME_CLIENT_SECRET }}
+          refresh_token: ${{ secrets.CHROME_REFRESH_TOKEN }}
+          extension_id: ${{ secrets.CHROME_EXTENSION_ID }}
+          zip_file_path: extension.zip
+          publish: true
