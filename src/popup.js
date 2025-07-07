@@ -2,13 +2,17 @@ const SHARE_LINK =
   "https://chromewebstore.google.com/detail/modern-sis/eanhlljpacpbggaiijocfoapjbofdbfm";
 const DEFAULT_MESSAGE = "Mohamed A. Abdallah";
 
-function share() {
+document.addEventListener("DOMContentLoaded", () => {
   const shareElement = document.getElementById("share");
   const footerElement = document.getElementById("footer");
+  const copiedElement = document.getElementById("copied");
+  const messageElement = document.getElementById("message");
+  let hoverTimeout;
 
-  navigator.clipboard
-    .writeText(SHARE_LINK)
-    .then(() => {
+  copiedElement.textContent = chrome.i18n.getMessage("copied");
+
+  function share() {
+    navigator.clipboard.writeText(SHARE_LINK).finally(() => {
       shareElement.classList.add("clicked");
       footerElement.classList.add("copied");
 
@@ -16,30 +20,17 @@ function share() {
         shareElement.classList.remove("clicked");
         footerElement.classList.remove("copied");
       }, 1000);
-    })
-    .catch((err) => {
-      console.error("Failed to copy: ", err);
-      shareElement.classList.remove("clicked");
-      footerElement.classList.remove("copied");
     });
-}
+  }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const copiedElement = document.getElementById("copied");
-  copiedElement.textContent = chrome.i18n.getMessage("copied");
-
-  const messageElement = document.getElementById("message");
-  let hoverTimeout;
-
-  const handleMouseEvent = (event) => {
+  function handleMouseEvent(event) {
     const text =
       chrome.i18n.getMessage(event.currentTarget.dataset.alt) ||
       DEFAULT_MESSAGE;
 
-    messageElement.classList.add("fade-out");
-
     if (event.type === "mouseover") {
       clearTimeout(hoverTimeout);
+      messageElement.classList.add("fade-out");
       setTimeout(() => {
         messageElement.textContent = text;
         messageElement.classList.remove("fade-out");
@@ -53,50 +44,44 @@ document.addEventListener("DOMContentLoaded", () => {
           messageElement.classList.remove("fade-in");
           messageElement.classList.add("fade-out");
         }
-      }, 500);
+      }, 1000);
     }
-  };
+  }
 
   document.querySelectorAll("[data-alt]").forEach((element) => {
     element.addEventListener("mouseover", handleMouseEvent);
     element.addEventListener("mouseout", handleMouseEvent);
   });
 
-  document.getElementById("share").addEventListener("click", share);
+  shareElement.addEventListener("click", share);
 
   chrome.storage.local.get("theme", (data) => {
     const theme = data.theme || "off";
     const themeRadio = document.querySelector(
       `input[name="theme"][value="${theme}"]`
     );
-    if (themeRadio) {
-      themeRadio.checked = true;
-    }
+    if (themeRadio) themeRadio.checked = true;
   });
 
   document.querySelectorAll('input[name="theme"]').forEach((radio) => {
     radio.addEventListener("change", function () {
       const selectedTheme = this.value;
-
+      const iconBase = `imgs/icons`;
       const selectedIcons = {
-        16: `imgs/icons/16/${selectedTheme}.png`,
-        32: `imgs/icons/32/${selectedTheme}.png`,
-        48: `imgs/icons/48/${selectedTheme}.png`,
-        128: `imgs/icons/128/${selectedTheme}.png`,
+        16: `${iconBase}/16/${selectedTheme}.png`,
+        32: `${iconBase}/32/${selectedTheme}.png`,
+        48: `${iconBase}/48/${selectedTheme}.png`,
+        128: `${iconBase}/128/${selectedTheme}.png`,
       };
 
       chrome.action.setIcon({ path: selectedIcons });
 
       chrome.tabs.query({ url: "*://*.aou.edu.kw/*" }, (tabs) => {
-        for (let i = 0; i < tabs.length; i++) {
+        for (const tab of tabs) {
           chrome.tabs.sendMessage(
-            tabs[i].id,
+            tab.id,
             { action: "changeTheme", theme: selectedTheme },
-            (response) => {
-              if (chrome.runtime.lastError) {
-                // ignore the error if the tab is not available
-              }
-            }
+            () => {} // ignore the error if the tab is not available
           );
         }
       });
