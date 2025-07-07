@@ -19,11 +19,10 @@ jobs:
           zip -r src.zip src/
 
       - name: Upload to Chrome Web Store
-        uses: PlasmoHQ/chrome-upload-action@v1
+        uses: browser-actions/release-chrome-extension@latest
         with:
-          client_id: ${{ secrets.CHROME_CLIENT_ID }}
-          client_secret: ${{ secrets.CHROME_CLIENT_SECRET }}
-          refresh_token: ${{ secrets.CHROME_REFRESH_TOKEN }}
-          extension_id: ${{ secrets.CHROME_EXTENSION_ID }}
-          zip_file_path: extension.zip
-          publish: true
+          extension-id: "eanhlljpacpbggaiijocfoapjbofdbfm"
+          extension-path: "src.zip"
+          oauth-client-id: ${{ secrets.OAUTH_CLIENT_ID }}
+          oauth-client-secret: ${{ secrets.OAUTH_CLIENT_SECRET }}
+          oauth-refresh-token: ${{ secrets.OAUTH_REFRESH_TOKEN }}
