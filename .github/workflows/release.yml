@@ -16,9 +16,7 @@ jobs:
 
       - name: Zip extension
         run: |
-          cd src
-          zip -r ../extension.zip .
-          cd ..
+          zip -r src.zip src/
 
       - name: Upload to Chrome Web Store
         uses: PlasmoHQ/chrome-upload-action@v1
