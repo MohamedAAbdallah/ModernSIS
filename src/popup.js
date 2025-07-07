@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   copiedElement.textContent = chrome.i18n.getMessage("copied");
 
   const messageElement = document.getElementById("message");
+  let hoverTimeout;
 
   const handleMouseEvent = (event) => {
     const text =
@@ -37,20 +38,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     messageElement.classList.add("fade-out");
 
-    setTimeout(() => {
-      messageElement.textContent =
-        event.type === "mouseover" ? text : DEFAULT_MESSAGE;
-
-      messageElement.classList.remove("fade-out");
-      messageElement.classList.add("fade-in");
-    }, 100);
-
-    if (event.type === "mouseout") {
+    if (event.type === "mouseover") {
+      clearTimeout(hoverTimeout);
       setTimeout(() => {
-        messageElement.textContent = DEFAULT_MESSAGE;
-        messageElement.classList.remove("fade-in");
-        messageElement.classList.add("fade-out");
+        messageElement.textContent = text;
+        messageElement.classList.remove("fade-out");
+        messageElement.classList.add("fade-in");
       }, 100);
+    } else if (event.type === "mouseout") {
+      hoverTimeout = setTimeout(() => {
+        const hovered = document.querySelector(":hover");
+        if (!hovered || !hovered.closest("[data-alt]")) {
+          messageElement.textContent = DEFAULT_MESSAGE;
+          messageElement.classList.remove("fade-in");
+          messageElement.classList.add("fade-out");
+        }
+      }, 500);
     }
   };
 
