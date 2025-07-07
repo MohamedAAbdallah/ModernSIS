@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         shareElement.classList.remove("clicked");
         footerElement.classList.remove("copied");
-      }, 1000);
+      }, 500);
     });
   }
 
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
           messageElement.classList.remove("fade-in");
           messageElement.classList.add("fade-out");
         }
-      }, 1000);
+      }, 500);
     }
   }
 
