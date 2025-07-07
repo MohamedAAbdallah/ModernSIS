@@ -1,4 +1,4 @@
-name: 🛑 Check Version Bump
+name: Check Manifest Version Bump
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   version-check:
-    name: 🔍 Ensure manifest version bump
+    name: Ensure manifest version bump
     runs-on: ubuntu-latest
 
     steps:
