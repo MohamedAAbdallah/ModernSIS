@@ -8,7 +8,7 @@
   "content_scripts": [
     {
       "matches": ["https://sis.aou.edu.kw/*", "https://sisksa.aou.edu.kw/*"],
-      "exclude_globs": ["*Report*", "*Exam*", "FinancialEGY"],
+      "exclude_globs": ["*Report*", "*Exam*", "*Financial*"],
       "css": ["modern.css"],
       "js": ["content.js"],
       "run_at": "document_start",
