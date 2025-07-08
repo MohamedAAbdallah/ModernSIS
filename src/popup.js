@@ -75,16 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       chrome.action.setIcon({ path: selectedIcons });
-
-      chrome.tabs.query({ url: "*://*.aou.edu.kw/*" }, (tabs) => {
-        for (const tab of tabs) {
-          chrome.tabs.sendMessage(
-            tab.id,
-            { action: "changeTheme", theme: selectedTheme },
-            () => {} // ignore the error if the tab is not available
-          );
-        }
-      });
+      chrome.storage.local.set({ theme: selectedTheme });
     });
   });
 });
