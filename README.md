@@ -2,6 +2,7 @@
 
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/v/eanhlljpacpbggaiijocfoapjbofdbfm?label=Chrome%20Web%20Store)
 [![CodeQL](https://github.com/MohamedAAbdallah/ModernSIS/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/MohamedAAbdallah/ModernSIS/actions/workflows/github-code-scanning/codeql)
+[![CodeFactor](https://www.codefactor.io/repository/github/mohamedaabdallah/modernsis/badge)](https://www.codefactor.io/repository/github/mohamedaabdallah/modernsis)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/MohamedAAbdallah/ModernSIS/issues)
 [![License](https://img.shields.io/github/license/MohamedAAbdallah/ModernSIS)](LICENSE)
 
@@ -12,6 +13,7 @@
 ## ✨ Overview
 
 **ModernSIS** applies a clean, customizable dark theme to AOU SIS domains:
+
 - `sisksa.aou.edu.kw`
 - `sis.aou.edu.kw`
 
@@ -42,7 +44,7 @@ Get the latest stable version from:
 
 ```bash
 git clone https://github.com/MohamedAAbdallah/ModernSIS.git
-````
+```
 
 1. Go to `chrome://extensions/`
 2. Enable **Developer mode**
@@ -84,18 +86,18 @@ This project is licensed under the [GNU GPLv3](LICENSE).
 
 Thanks to the amazing contributors:
 
-* **Yossif ElHoseny** – Web Designer
-* **Mohamed Hamed** – Web Developer
-* **Bassant Ahmed** – Graphic Designer
-* **Ahmed Yasser**, **Rana Abdelsalam** – Testers
+- **Yossif ElHoseny** – Web Designer
+- **Mohamed Hamed** – Web Developer
+- **Bassant Ahmed** – Graphic Designer
+- **Ahmed Yasser**, **Rana Abdelsalam** – Testers
 
 ---
 
 ## 📬 Contact
 
-* **Author**: Mohamed A. Abdallah
-* **Email**: [eng.mohamed.a.abdallah@gmail.com](mailto:eng.mohamed.a.abdallah@gmail.com)
-* **GitHub**: [@MohamedAAbdallah](https://github.com/MohamedAAbdallah)
+- **Author**: Mohamed A. Abdallah
+- **Email**: [eng.mohamed.a.abdallah@gmail.com](mailto:eng.mohamed.a.abdallah@gmail.com)
+- **GitHub**: [@MohamedAAbdallah](https://github.com/MohamedAAbdallah)
 
 ---
 
