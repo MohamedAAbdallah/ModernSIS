@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Modern SIS",
-  "version": "0.6.1",
+  "version": "0.7.1",
   "description": "Applies a modern dark mode theme to the AOU Student Information System (SIS).",
-  "permissions": ["storage", "tabs"],
+  "permissions": ["storage"],
   "default_locale": "en",
   "content_scripts": [
     {
       "matches": ["https://sis.aou.edu.kw/*", "https://sisksa.aou.edu.kw/*"],
-      "exclude_globs": ["*Report*", "*Exam*", "FinancialEGY"],
+      "exclude_globs": ["*Report*", "*Exam*", "*Financial*"],
       "css": ["modern.css"],
       "js": ["content.js"],
       "run_at": "document_start",
